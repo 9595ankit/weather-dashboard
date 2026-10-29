@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check the current weather and forecast for any city.">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Your local forecast</p>
+      <h1>Weather Dashboard</h1>
+    </div>
+    <button id="theme-toggle" class="secondary-button" type="button">
+      Switch to dark mode
+    </button>
+  </header>
+
+  <main>
+    <form id="search-form" class="search-panel">
+      <label for="city-search">Search for a city</label>
+      <div class="search-row">
+        <input
+          id="city-search"
+          name="city"
+          type="search"
+          placeholder="For example, Mumbai"
+          autocomplete="off"
+        >
+        <button type="submit">Search</button>
+      </div>
+    </form>
+
+    <section class="recent-section" aria-labelledby="recent-heading">
+      <h2 id="recent-heading">Recent searches</h2>
+      <div id="recent-searches" class="recent-searches"></div>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="weather-results" aria-live="polite">
+      <div id="current-weather"></div>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Weather data provided by <a href="https://open-meteo.com/">Open-Meteo</a>.</p>
+  </footer>
+</body>
+</html>
